@@ -1,0 +1,16 @@
+<table>
+    <thead>
+        <tr>
+            <th *ngFor="let header of headers">
+                {{header.display}}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let value of values">
+            <th *ngFor="let header of headers">
+                {{value[headers.indexOf(header)]}}
+            </th>
+        </tr>
+    </tbody>
+</table>
